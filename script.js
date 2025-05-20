@@ -1,4 +1,4 @@
-// 导航栏滚动效果
+// Navbar scroll effect
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// 平滑滚动
+// Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -24,53 +24,53 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// 表单提交处理
+// Form submission handling
 const registerForm = document.querySelector('.register-form');
 if (registerForm) {
     registerForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // 获取表单数据
+        // Get form data
         const formData = new FormData(this);
         const data = Object.fromEntries(formData);
         
-        // 这里可以添加表单验证逻辑
+        // Add form validation logic here
         if (!validateForm(data)) {
             return;
         }
         
-        // 模拟表单提交
-        alert('感谢您的注册！我们会尽快与您联系。');
+        // Simulate form submission
+        alert('Thank you for registering! We will contact you soon.');
         this.reset();
     });
 }
 
-// 表单验证函数
+// Form validation function
 function validateForm(data) {
-    // 验证姓名
+    // Validate name
     if (!data.name || data.name.trim().length < 2) {
-        alert('请输入有效的姓名');
+        alert('Please enter a valid name');
         return false;
     }
     
-    // 验证邮箱
+    // Validate email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!data.email || !emailRegex.test(data.email)) {
-        alert('请输入有效的电子邮箱地址');
+        alert('Please enter a valid email address');
         return false;
     }
     
-    // 验证手机号
+    // Validate phone number
     const phoneRegex = /^1[3-9]\d{9}$/;
     if (!data.phone || !phoneRegex.test(data.phone)) {
-        alert('请输入有效的手机号码');
+        alert('Please enter a valid phone number');
         return false;
     }
     
     return true;
 }
 
-// 添加动画效果
+// Add animation effects
 const animateOnScroll = () => {
     const elements = document.querySelectorAll('.feature-card, .product-card, .testimonial-card');
     
@@ -85,7 +85,7 @@ const animateOnScroll = () => {
     });
 };
 
-// 初始化动画
+// Initialize animations
 document.addEventListener('DOMContentLoaded', () => {
     const elements = document.querySelectorAll('.feature-card, .product-card, .testimonial-card');
     elements.forEach(element => {
@@ -95,5 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // 初始检查
+    animateOnScroll(); // Initial check
 }); 
