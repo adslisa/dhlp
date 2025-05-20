@@ -353,28 +353,210 @@ body {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
+    /* 导航栏 */
     .nav-links {
         display: none;
     }
     
+    .navbar .container {
+        padding: 10px 15px;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Hero 区域 */
+    .hero {
+        height: 80vh;
+        margin-top: 60px;
+    }
+    
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        padding: 0 15px;
     }
     
     .hero p {
         font-size: 1rem;
+        padding: 0 20px;
     }
     
     .hero-buttons {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
+        padding: 0 20px;
     }
     
-    .features-grid,
-    .product-grid,
+    .primary-button, .secondary-button {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+    
+    /* 特色优势 */
+    .features {
+        padding: 60px 0;
+    }
+    
+    .features h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    /* 产品展示 */
+    .products {
+        padding: 60px 0;
+    }
+    
+    .products h2 {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .product-card img {
+        height: 250px;
+    }
+    
+    /* 用户评价 */
+    .testimonials {
+        padding: 60px 0;
+    }
+    
+    .testimonials h2 {
+        font-size: 2rem;
+    }
+    
     .testimonial-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
     }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    /* 下载区域 */
+    .download {
+        padding: 60px 0;
+    }
+    
+    .download h2 {
+        font-size: 2rem;
+    }
+    
+    .download p {
+        padding: 0 20px;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    
+    .app-store-button,
+    .google-play-button {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .app-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    /* 页脚 */
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .footer-content {
+        gap: 30px;
+    }
+    
+    .footer-section h4 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+        padding: 0 20px;
+    }
+}
+
+/* 小屏幕设备 */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .feature-card i {
+        font-size: 2rem;
+    }
+    
+    .product-card img {
+        height: 200px;
+    }
+    
+    .app-store-button i,
+    .google-play-button i {
+        font-size: 1.5rem;
+    }
+    
+    .button-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* 确保图片在移动设备上正确显示 */
+.hero-background {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* 优化触摸目标大小 */
+a, button {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* 优化文本可读性 */
+p, li {
+    line-height: 1.6;
+    max-width: 65ch;
+}
+
+/* 优化表单元素 */
+input, button {
+    font-size: 16px; /* 防止 iOS 缩放 */
 }
 
 /* APP下载区域样式 */
