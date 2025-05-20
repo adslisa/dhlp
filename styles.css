@@ -76,7 +76,7 @@ body {
 
 /* 英雄区域样式 */
 .hero {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://cdn.pixabay.com/photo/2019/10/09/07/28/plan-4536298_1280.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://res.cloudinary.com/demo/image/upload/v1/samples/logistics-warehouse.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
