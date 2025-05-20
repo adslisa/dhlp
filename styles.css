@@ -76,7 +76,7 @@ body {
 
 /* 英雄区域样式 */
 .hero {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://cdn.pixabay.com/photo/2018/02/16/10/52/business-3159533_1280.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&auto=format&fit=crop&q=80');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
